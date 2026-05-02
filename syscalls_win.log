@@ -1,0 +1,66 @@
+
+=== SESSION: Sat Apr 18 17:05:58 2026 ===
+[SUCCESS] CreateFile                 => HANDLE=0x00000000000000E4
+[SUCCESS] ReadFile                   => 48 bytes
+[SUCCESS] CloseHandle(input)         => OK
+[SUCCESS] CreateFile                 => HANDLE=0x00000000000000E4
+[SUCCESS] WriteFile                  => 48 bytes
+[SUCCESS] CloseHandle(output)        => OK
+=== END ===
+
+=== SESSION: Sat Apr 18 17:05:58 2026 ===
+[SUCCESS] CreateProcess              => PID=16696 TID=18844
+[SUCCESS] WaitForSingleObject        => WAIT_OBJECT_0
+[SUCCESS] GetExitCodeProcess         => exit_code=0
+[SUCCESS] CloseHandle(process+thread) => OK
+=== END ===
+
+=== SESSION: Sat Apr 18 17:05:58 2026 ===
+[SUCCESS] VirtualAlloc               => addr=0x000002DB467D0000 size=4096
+[SUCCESS] VirtualFree                => MEM_RELEASE OK
+[SUCCESS] CreateFile                 => HANDLE=0x00000000000000D0
+[SUCCESS] SetEndOfFile               => 4096 bytes
+[SUCCESS] CreateFileMapping          => PAGE_READWRITE OK
+[SUCCESS] MapViewOfFile              => addr=0x000002DB467D0000
+[SUCCESS] UnmapViewOfFile            => OK
+[SUCCESS] CloseHandle(hMap)          => OK
+[SUCCESS] CloseHandle(hFile)         => OK
+=== END ===
+
+=== SESSION: Sat Apr 18 17:05:58 2026 ===
+[SUCCESS] CreatePipe                 => hRead=0x00000000000000D4 hWrite=0x00000000000000D8
+[SUCCESS] CreateProcess(child)       => PID=12220
+[SUCCESS] ReadFile(pipe)             => 47 bytes
+[SUCCESS] WaitForSingleObject        => child done
+=== END ===
+
+=== SESSION: Sat Apr 18 17:05:58 2026 ===
+[SUCCESS] CreateFile                 => HANDLE=0x00000000000000C0
+[SUCCESS] CloseHandle(test_file)     => OK
+[SUCCESS] SetFileSecurity(DACL)      => Everyone=GENERIC_ALL
+[SUCCESS] GetFileSecurity            => DACL read OK
+[SUCCESS] SetFileAttributes          => FILE_ATTRIBUTE_NORMAL
+[SUCCESS] GetFileAttributes          => attrs=0x00000080 (NORMAL)
+=== END ===
+
+=== SESSION: Sat Apr 18 17:05:58 2026 ===
+[SUCCESS] CreateFile                 => HANDLE=0x00000000000000C8
+[SUCCESS] ReadFile(input)            => 32 bytes
+[SUCCESS] CloseHandle(input)         => OK
+[SUCCESS] CreateFileMapping(shared)  => Local\FFT_SharedMem_OS_CCP
+[SUCCESS] MapViewOfFile(shared)      => addr OK
+[SUCCESS] CreatePipe                 => hRead+hWrite OK
+[SUCCESS] CreateProcess              => child0 PID=24820
+[SUCCESS] CreateProcess              => child1 PID=12460
+[SUCCESS] ReadFile(pipe notifications) => 2 x OK
+[SUCCESS] WaitForSingleObject(child0) => done
+[SUCCESS] WaitForSingleObject(child1) => done
+[SUCCESS] CreateFile                 => HANDLE=0x00000000000000F4
+[SUCCESS] WriteFile(fft_output)      => 8 lines
+[SUCCESS] CloseHandle(fft_output)    => OK
+[SUCCESS] SetFileAttributes(output)  => FILE_ATTRIBUTE_NORMAL
+[SUCCESS] UnmapViewOfFile            => OK
+[SUCCESS] CloseHandle(hMap)          => OK
+[SUCCESS] CreateFile                 => HANDLE=0x000000000000010C
+[SUCCESS] CloseHandle(results)       => OK
+=== END ===
