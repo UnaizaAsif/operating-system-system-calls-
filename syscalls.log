@@ -1,0 +1,61 @@
+
+=== SESSION: Sat Apr 18 12:45:28 2026 ===
+[SUCCESS] open                 => 4
+[SUCCESS] read                 => 32
+[SUCCESS] close(input)         => 0
+[SUCCESS] open                 => 4
+[SUCCESS] write                => 32
+[SUCCESS] close(output)        => 0
+=== END ===
+
+=== SESSION: Sat Apr 18 12:45:37 2026 ===
+[SUCCESS] fork                 => 5425
+[SUCCESS] fork                 => 0
+[SUCCESS] wait                 => 5425
+=== END ===
+
+=== SESSION: Sat Apr 18 12:45:48 2026 ===
+[SUCCESS] open                 => 4
+[SUCCESS] ftruncate            => 4096
+[SUCCESS] mmap                 => 1
+[SUCCESS] munmap               => 0
+[SUCCESS] close(mmap_file)     => 0
+=== END ===
+
+=== SESSION: Sat Apr 18 12:45:58 2026 ===
+[SUCCESS] pipe                 => 4
+[SUCCESS] fork                 => 5428
+[SUCCESS] fork                 => 0
+[SUCCESS] write(pipe)          => 33
+[SUCCESS] read(pipe)           => 33
+=== END ===
+
+=== SESSION: Sat Apr 18 12:46:06 2026 ===
+[SUCCESS] open                 => 4
+[SUCCESS] close(perm_test)     => 0
+[SUCCESS] chmod(0755)          => 493
+[SUCCESS] chown                => 1000
+[SUCCESS] umask(0022)          => 2
+=== END ===
+
+=== SESSION: Sat Apr 18 12:46:15 2026 ===
+[SUCCESS] umask(0022)          => 2
+[SUCCESS] open                 => 4
+[SUCCESS] read(input)          => 32
+[SUCCESS] close(input)         => 0
+[SUCCESS] mmap(shared)         => 1
+[SUCCESS] pipe                 => 4
+[SUCCESS] fork(child1)         => 5431
+[SUCCESS] fork(child1)         => 0
+[SUCCESS] fork(child2)         => 5432
+[SUCCESS] fork(child2)         => 0
+[SUCCESS] wait(child1)         => 0
+[SUCCESS] wait(child2)         => 0
+[SUCCESS] open                 => 4
+[SUCCESS] write(fft_output)    => 8
+[SUCCESS] close(fft_output)    => 0
+[SUCCESS] chmod(fft_output)    => 420
+[SUCCESS] munmap               => 0
+[SUCCESS] open                 => 4
+[SUCCESS] close(results)       => 0
+=== END ===
